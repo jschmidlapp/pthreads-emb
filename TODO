@@ -1,5 +1,0 @@
-1. Clean up compiler #defines
-8. Check NP routines.
-9. Check for printfs
-10. Remove  -Werror from Makefiles
-

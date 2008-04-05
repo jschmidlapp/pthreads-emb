@@ -44,7 +44,7 @@
 #if !defined( PTHREAD_H )
 #define PTHREAD_H
 
-#include <pte-config.h>
+#include <pte_types.h>
 
 #include <sched.h>
 
@@ -984,9 +984,7 @@ enum
 #endif
 
 
-#ifndef PTE_BUILD
-
-#ifdef PTE_CLEANUP_CXX
+#ifdef PTE_CXX_EXCEPTIONS
 
     /*
      * Redefine the C++ catch keyword to ensure that applications
@@ -996,9 +994,7 @@ enum
         catch( pte_exception & ) { throw; } \
         catch( E )
 
-#endif /* PTE_CLEANUP_CXX */
-
-#endif /* ! PTE_BUILD */
+#endif /* ! PTE_CXX_EXCEPTIONS */
 
 #undef PTE_LEVEL
 #undef PTE_LEVEL_MAX

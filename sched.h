@@ -51,7 +51,7 @@
 #ifndef _SCHED_H
 #define _SCHED_H
 
-#include <pte-config.h>
+#include <pte_types.h>
 
 #undef PTE_LEVEL
 

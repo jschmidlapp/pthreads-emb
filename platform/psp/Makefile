@@ -162,7 +162,7 @@ OS_OBJS = \
 OBJS = $(MUTEX_OBJS) $(MUTEXATTR_OBJS) $(THREAD_OBJS) $(SUPPORT_OBJS) $(TLS_OBJS) $(MISC_OBJS) $(SEM_OBJS) $(BARRIER_OBJS) $(SPIN_OBJS) $(CONDVAR_OBJS) $(RWLOCK_OBJS) $(CANCEL_OBJS) $(OS_OBJS)
 
 INCDIR = 
-CFLAGS = $(GLOBAL_CFLAGS) -G0 -O2 -Wall -g -fno-strict-aliasing -Werror -I../.. -I../helper 
+CFLAGS = $(GLOBAL_CFLAGS) -G0 -O2 -Wall -g -fno-strict-aliasing -I../.. -I../helper 
 CXXFLAGS = $(CFLAGS) -fexceptions -fno-rtti -Werror -D__CLEANUP_CXX
 ASFLAGS = $(CFLAGS)
 
