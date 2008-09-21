@@ -654,6 +654,10 @@ enum
 
 #endif /* PTE_CLEANUP_C */
 
+#ifdef __cplusplus
+extern "C" {
+#endif /* __cplusplus */
+
     /*
      * ===============
      * ===============
@@ -959,6 +963,10 @@ enum
     void *  pthread_timechange_handler_np(void *);
 
 #endif /*PTE_LEVEL >= PTE_LEVEL_MAX - 1 */
+
+#ifdef __cplusplus
+}
+#endif /* cplusplus */
 
 #if PTE_LEVEL >= PTE_LEVEL_MAX
 
