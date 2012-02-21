@@ -9,7 +9,7 @@ embedded operating systems.
 
 Currently, PTE has been ported to Texas Instrument's DSP/BIOS and Sony's PSP OS.
 
-PTE is based heavily on Pthreads Win32, and implementation of pthreads 
+PTE is based heavily on Pthreads Win32, an implementation of pthreads 
 for Windows. 
 
 Information on building and porting PTE is available at 
