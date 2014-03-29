@@ -170,6 +170,7 @@ LDFLAGS =
 LIBS = 
 
 PSPSDK=$(shell psp-config --pspsdk-path)
+PSPDIR=$(shell psp-config --psp-prefix)
 include $(PSPSDK)/lib/build.mak
 
 
@@ -188,7 +189,10 @@ pte_threadStart.o: pte_threadStart.c
 endif
 
 install: $(TARGET_LIB)
-	@cp -v $(TARGET_LIB) `psp-config --psp-prefix`/lib
-	@cp -v *.h `psp-config --psp-prefix`/include
+	@install -d $(DESTDIR)$(PSPDIR)/lib
+	@install -m644 $(TARGET_LIB) $(DESTDIR)$(PSPDIR)/lib
+	@install -d $(DESTDIR)$(PSPDIR)/include
+	@install -m644 *.h $(DESTDIR)$(PSPDIR)/include
+	@install -m644 ../../*.h $(DESTDIR)$(PSPDIR)/include
 	@echo "Done."
 
